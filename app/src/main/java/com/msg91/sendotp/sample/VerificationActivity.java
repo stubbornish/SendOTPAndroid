@@ -155,6 +155,7 @@ public class VerificationActivity extends AppCompatActivity implements ActivityC
     @Override
     public void onVerified(String response) {
         Log.d(TAG, "Verified!\n" + response);
+        enableInputField(false);
         hideProgressBarAndShowMessage(R.string.verified);
         showCompleted();
     }
